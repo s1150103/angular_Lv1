@@ -16,7 +16,7 @@ AngularとTypeScriptで作成されたシンプルなtodoアプリです。CRUD�
 
 ## 技術スタック
 
-- **フレームワーク**: Angular v20.x
+- **フレームワーク**: Angular v20.1.6
 - **言語**: TypeScript
 - **スタイリング**: CSS
 - **データ管理**: メモリ内ストレージ（永続化対応）
