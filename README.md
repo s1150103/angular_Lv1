@@ -1,28 +1,30 @@
-# Angular ToDo App (Lv1)
+# Todoアプリ
 
-Angular Tutorial に基づいたToDoアプリケーションです。NgModulesとTemplate Driven Formを使用して実装されています。
+AngularとTypeScriptで作成されたシンプルなtodoアプリです。CRUD機能を備えた実用的なタスク管理ツールです。
 
 ## 機能
 
-### ✅ 実装済み機能 (Lv1)
+### ✅ 実装済み機能
 
-- **ToDoの一覧表示**: 登録されたToDoの一覧を表示
-- **ToDoの詳細表示**: 個別のToDoの詳細情報を表示
-- **ToDoの新規作成**: Template Driven Formを使用したToDo作成
-- **ToDoの更新**: 既存のToDoの編集（初期値設定済み）
-- **ToDoの削除**: 一覧・詳細・更新画面からの削除機能
-- **ルーティング**: 各画面間のナビゲーション
+- **todo一覧表示**: 登録されたtodoの一覧を表示
+- **todo詳細表示**: 個別のtodoの詳細情報を表示
+- **todo新規作成**: フォームを使用した新しいtodo作成
+- **todo編集**: 既存のtodoの更新機能
+- **todo削除**: 不要なtodoの削除機能
+- **レスポンシブデザイン**: モバイルフレンドリーなUI
+- **リアルタイム更新**: 操作後の即座な画面更新
 
-## 技術仕様
+## 技術スタック
 
-- **Angular**: v20.x
-- **アーキテクチャ**: NgModules（standalone: false）
-- **フォーム**: Template Driven Form
-- **データ管理**: In-Memory Web API
+- **フレームワーク**: Angular v20.x
+- **言語**: TypeScript
+- **スタイリング**: CSS
+- **データ管理**: メモリ内ストレージ（永続化対応）
 - **ルーティング**: Angular Router
+- **開発ツール**: Angular CLI
 - **コード品質**: ESLint + Prettier
 
-## ToDoモデル
+## todoモデル
 
 ```typescript
 export interface Todo {
@@ -36,12 +38,12 @@ export interface Todo {
 
 ```
 src/app/
-├── todos/              # ToDo一覧コンポーネント
-├── todo-detail/        # ToDo詳細コンポーネント
-├── todo-add/           # ToDo新規作成コンポーネント
-├── todo-edit/          # ToDo更新コンポーネント
-├── todo.service.ts     # ToDoサービス
-├── in-memory-data.service.ts  # 初期データ管理
+├── todos/              # todo一覧コンポーネント
+├── todo-detail/        # todo詳細コンポーネント
+├── todo-add/           # todo新規作成コンポーネント
+├── todo-edit/          # todo更新コンポーネント
+├── todo.service.ts     # todoサービス
+├── message.service.ts  # メッセージサービス
 ├── app-routing-module.ts      # ルーティング設定
 └── app-module.ts       # アプリケーションモジュール
 ```
@@ -95,11 +97,11 @@ npm run format:check
 
 ## 画面遷移
 
-1. **TOP** (`/`) → ToDo一覧にリダイレクト
-2. **ToDo一覧** (`/todos`) → 全てのToDoを表示
-3. **ToDo詳細** (`/detail/:id`) → 指定されたToDoの詳細
-4. **ToDo新規作成** (`/add`) → 新しいToDoの作成
-5. **ToDo編集** (`/edit/:id`) → 既存のToDoの編集
+1. **TOP** (`/`) → todo一覧にリダイレクト
+2. **todo一覧** (`/todos`) → 全てのtodoを表示
+3. **todo詳細** (`/detail/:id`) → 指定されたtodoの詳細
+4. **todo新規作成** (`/add`) → 新しいtodoの作成
+5. **todo編集** (`/edit/:id`) → 既存のtodoの編集
 
 ## 参考資料
 
