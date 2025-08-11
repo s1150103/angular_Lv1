@@ -1,0 +1,26 @@
+<h2>todo一覧</h2>
+<div>
+  <a routerLink="/add" class="add-button">新しいtodoを追加</a>
+</div>
+<ul class="todos">
+  <li *ngFor="let todo of todos">
+    <div class="todo-item">
+      <div class="todo-content">
+        <h3>{{ todo.title }}</h3>
+        <p>{{ todo.description }}</p>
+      </div>
+      <div class="todo-actions">
+        <a routerLink="/detail/{{ todo.id }}">詳細</a>
+        <a routerLink="/edit/{{ todo.id }}">編集</a>
+        <button
+          type="button"
+          class="delete"
+          title="削除"
+          (click)="delete(todo)"
+        >
+          削除
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>

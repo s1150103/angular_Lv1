@@ -1,0 +1,48 @@
+/* TodoAddComponent's private CSS styles */
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #444;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #369;
+  box-shadow: 0 0 5px rgba(51, 102, 153, 0.3);
+}
+
+.form-actions {
+  margin-top: 2em;
+}
+
+.save-button {
+  background-color: #369;
+  color: white;
+  margin-right: 1em;
+}
+
+.save-button:hover {
+  background-color: #2a5799;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #545b62;
+}

@@ -1,0 +1,57 @@
+/* TodoDetailComponent's private CSS styles */
+.todo-detail {
+  padding: 1.5em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 500px;
+}
+
+.todo-detail h2 {
+  color: #369;
+  margin-bottom: 1em;
+}
+
+.todo-detail h3 {
+  color: #627489;
+  margin-bottom: 0.5em;
+}
+
+.todo-detail p {
+  color: #666;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.edit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #545b62;
+}
