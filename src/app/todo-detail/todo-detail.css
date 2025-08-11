@@ -1,0 +1,61 @@
+.todo-detail {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.todo-detail h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.todo-detail p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.actions button,
+.actions a {
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.actions a {
+  background-color: #28a745;
+  color: white;
+  display: inline-block;
+}
+
+.actions a:hover {
+  background-color: #1e7e34;
+}
+
+.delete {
+  background-color: #dc3545 !important;
+}
+
+.delete:hover {
+  background-color: #c82333 !important;
+}

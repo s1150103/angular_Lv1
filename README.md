@@ -1,59 +1,114 @@
-# AngularTodo
+# Angular ToDo App (Lv1)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+Angular Tutorial に基づいたToDoアプリケーションです。NgModulesとTemplate Driven Formを使用して実装されています。
 
-## Development server
+## 機能
 
-To start a local development server, run:
+### ✅ 実装済み機能 (Lv1)
+
+- **ToDoの一覧表示**: 登録されたToDoの一覧を表示
+- **ToDoの詳細表示**: 個別のToDoの詳細情報を表示
+- **ToDoの新規作成**: Template Driven Formを使用したToDo作成
+- **ToDoの更新**: 既存のToDoの編集（初期値設定済み）
+- **ToDoの削除**: 一覧・詳細・更新画面からの削除機能
+- **ルーティング**: 各画面間のナビゲーション
+
+## 技術仕様
+
+- **Angular**: v20.x
+- **アーキテクチャ**: NgModules（standalone: false）
+- **フォーム**: Template Driven Form
+- **データ管理**: In-Memory Web API
+- **ルーティング**: Angular Router
+- **コード品質**: ESLint + Prettier
+
+## ToDoモデル
+
+```typescript
+export interface Todo {
+  id: number;
+  title: string;
+  description: string;
+}
+```
+
+## プロジェクト構成
+
+```
+src/app/
+├── todos/              # ToDo一覧コンポーネント
+├── todo-detail/        # ToDo詳細コンポーネント
+├── todo-add/           # ToDo新規作成コンポーネント
+├── todo-edit/          # ToDo更新コンポーネント
+├── todo.service.ts     # ToDoサービス
+├── in-memory-data.service.ts  # 初期データ管理
+├── app-routing-module.ts      # ルーティング設定
+└── app-module.ts       # アプリケーションモジュール
+```
+
+## 開発環境のセットアップ
+
+### 必要な環境
+- Node.js (v18以上)
+- npm
+- Angular CLI
+
+### インストール
 
 ```bash
+# プロジェクトのクローン
+git clone https://github.com/s1150103/angular_Lv1.git
+cd angular_Lv1
+
+# 依存関係のインストール
+npm install
+```
+
+### 開発サーバーの起動
+
+```bash
+npm start
+# または
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+アプリケーションは http://localhost:4200 で起動します。
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### その他のコマンド
 
 ```bash
-ng generate component component-name
+# ビルド
+npm run build
+
+# テスト実行
+npm test
+
+# ESLintでコードチェック
+npm run lint
+
+# Prettierでコードフォーマット
+npm run format
+
+# フォーマットチェック
+npm run format:check
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 画面遷移
 
-```bash
-ng generate --help
-```
+1. **TOP** (`/`) → ToDo一覧にリダイレクト
+2. **ToDo一覧** (`/todos`) → 全てのToDoを表示
+3. **ToDo詳細** (`/detail/:id`) → 指定されたToDoの詳細
+4. **ToDo新規作成** (`/add`) → 新しいToDoの作成
+5. **ToDo編集** (`/edit/:id`) → 既存のToDoの編集
 
-## Building
+## 参考資料
 
-To build the project run:
+このプロジェクトは[Angular Tour of Heroes tutorial](https://angular.jp/tutorial)の構造を参考に作成されています。
 
-```bash
-ng build
-```
+- [Angular公式ドキュメント](https://angular.jp/)
+- [Template Driven Forms](https://angular.jp/guide/forms)
+- [Angular Router](https://angular.jp/guide/router)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## ライセンス
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+このプロジェクトはMITライセンスの下で公開されています。

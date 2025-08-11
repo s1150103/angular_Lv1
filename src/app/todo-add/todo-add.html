@@ -1,0 +1,59 @@
+<h2>新しいToDoを追加</h2>
+
+<form #todoForm="ngForm" (ngSubmit)="save()" class="todo-form">
+  <div class="form-group">
+    <label for="title">タイトル:</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="todo.title"
+      #title="ngModel"
+      required
+      minlength="1"
+      class="form-control"
+    />
+    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error">
+      <div *ngIf="title.errors?.['required']">タイトルは必須です</div>
+      <div *ngIf="title.errors?.['minlength']">
+        タイトルは1文字以上入力してください
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">説明:</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="todo.description"
+      #description="ngModel"
+      required
+      minlength="1"
+      class="form-control"
+      rows="4"
+    ></textarea>
+    <div
+      *ngIf="description.invalid && (description.dirty || description.touched)"
+      class="error"
+    >
+      <div *ngIf="description.errors?.['required']">説明は必須です</div>
+      <div *ngIf="description.errors?.['minlength']">
+        説明は1文字以上入力してください
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button
+      type="submit"
+      [disabled]="!todoForm.form.valid"
+      class="btn btn-primary"
+    >
+      保存
+    </button>
+    <button type="button" (click)="goBack()" class="btn btn-secondary">
+      キャンセル
+    </button>
+  </div>
+</form>

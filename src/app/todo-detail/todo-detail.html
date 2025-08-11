@@ -1,0 +1,13 @@
+<div *ngIf="todo">
+  <h2>ToDo詳細</h2>
+  <div class="todo-detail">
+    <h3>{{ todo.title }}</h3>
+    <p>{{ todo.description }}</p>
+  </div>
+
+  <div class="actions">
+    <button type="button" (click)="goBack()">戻る</button>
+    <a routerLink="/edit/{{ todo.id }}">編集</a>
+    <button type="button" class="delete" (click)="delete()">削除</button>
+  </div>
+</div>
